@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Pagination from './components/Pagination/Pagination';
-import PostList from './components/Pagination/';
+// import PostList from './components/Pagination/';
+import pinkClock from './components/customhook/pinkClock';
+import MagicBox from './components/magicBox/MagicBox';
+
 function App() {
   const [pagination, setPagination] = useState({
     _page: 1,
@@ -36,10 +39,12 @@ function App() {
   }, [filter]);
   return (
     <div className="App">
-      <Pagination
+      {/* <Pagination
         pagination={pagination}
         onPageChange={handlePageChange}
-      ></Pagination>
+      ></Pagination> */}
+
+      <MagicBox></MagicBox>
     </div>
   );
 }
